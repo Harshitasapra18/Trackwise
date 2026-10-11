@@ -1,0 +1,838 @@
+/* =========================================================
+   MENTOR PROFILE PAGE
+========================================================= */
+
+.mentor-profile-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f5f7fb;
+
+  display: flex;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.mentor-sidebar {
+  width: 250px;
+  min-width: 250px;
+
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #111827;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 24px 0;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.mentor-logo {
+  padding: 0 24px 28px;
+}
+
+.mentor-logo h2 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.mentor-menu {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.mentor-menu li {
+  margin: 4px 0;
+}
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.mentor-menu-link {
+  width: calc(100% - 24px);
+  min-height: 46px;
+
+  margin: 0 12px;
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border-radius: 8px;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.mentor-menu-link svg {
+  width: 17px;
+
+  font-size: 16px;
+
+  flex-shrink: 0;
+}
+
+.mentor-menu-link:hover {
+  background: #1f2937;
+
+  color: white;
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.mentor-menu-link.mentor-active {
+  background: #2563eb;
+
+  color: white;
+}
+
+.mentor-menu-link.mentor-active:hover {
+  background: #1d4ed8;
+
+  color: white;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.mentor-logout-btn {
+  width: calc(100% - 24px);
+  height: 48px;
+
+  margin: 0 12px 22px;
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #ef4444;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mentor-logout-btn:hover {
+  background: #dc2626;
+
+  transform: translateY(-1px);
+}
+
+.mentor-logout-btn:active {
+  transform: translateY(0);
+}
+
+.mentor-logout-btn svg {
+  width: 17px;
+
+  font-size: 16px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.profile-content {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  padding: 35px 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.profile-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.profile-header h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.profile-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   EDIT PROFILE BUTTON
+========================================================= */
+
+.edit-profile-btn {
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 12px 18px;
+
+  background: #2563eb;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+.edit-profile-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   MAIN PROFILE CARD
+========================================================= */
+
+.profile-card-main {
+  width: 100%;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  padding: 26px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.mentor-avatar {
+  width: 78px;
+  height: 78px;
+
+  min-width: 78px;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+
+  color: #2563eb;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROFILE NAME
+========================================================= */
+
+.profile-name {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.profile-name h2 {
+  margin: 0 0 6px;
+
+  color: #111827;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+.profile-name p {
+  margin: 0 0 9px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.profile-name span {
+  color: #16a34a;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.profile-name span b {
+  margin-right: 5px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   USERNAME / PROFILE ID
+========================================================= */
+
+.profile-id {
+  min-width: 170px;
+
+  padding-left: 25px;
+
+  border-left: 1px solid #e5e7eb;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+}
+
+.profile-id small {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+.profile-id b {
+  color: #374151;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   TWO COLUMN GRID
+========================================================= */
+
+.profile-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   COMMON PROFILE BOX
+========================================================= */
+
+.profile-box {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  padding: 25px 27px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.profile-box h2 {
+  margin: 0 0 23px;
+
+  color: #111827;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PERSONAL INFORMATION
+========================================================= */
+
+.info-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item > svg {
+  width: 18px;
+
+  min-width: 18px;
+
+  color: #2563eb;
+
+  font-size: 17px;
+}
+
+.info-item div {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.info-item small {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+.info-item b {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* =========================================================
+   MENTORSHIP METRICS
+========================================================= */
+
+.profile-metrics {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.profile-metrics > div {
+  background: #f8fafc;
+
+  border: 1px solid #eef2f7;
+
+  border-radius: 9px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.profile-metrics b {
+  color: #2563eb;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+.profile-metrics span {
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIBILITIES
+========================================================= */
+
+.responsibilities {
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+.responsibilities ul {
+  margin: 0;
+
+  padding-left: 20px;
+}
+
+.responsibilities li {
+  margin-bottom: 13px;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.responsibilities li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.profile-footer {
+  width: 100%;
+
+  padding: 20px 0 5px;
+
+  text-align: center;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.mentor-profile-loading {
+  min-height: 100vh;
+
+  background: #f5f7fb;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.profile-loading-box {
+  padding: 20px 30px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card-main {
+    flex-wrap: wrap;
+  }
+
+  .profile-id {
+    width: 100%;
+
+    min-width: 100%;
+
+    padding-left: 0;
+
+    padding-top: 18px;
+
+    border-left: none;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .mentor-sidebar {
+    width: 210px;
+
+    min-width: 210px;
+  }
+
+  .profile-content {
+    margin-left: 210px;
+
+    width: calc(100% - 210px);
+
+    padding: 25px 20px;
+  }
+
+  .profile-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 25px;
+  }
+
+  .profile-card-main {
+    padding: 22px;
+  }
+
+  .profile-metrics {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .mentor-sidebar {
+    width: 70px;
+
+    min-width: 70px;
+  }
+
+  .mentor-logo {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .mentor-logo h2 {
+    font-size: 0;
+  }
+
+  .mentor-logo h2::after {
+    content: "T";
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 700;
+  }
+
+  .mentor-menu-link {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .mentor-menu-link span {
+    display: none;
+  }
+
+  .mentor-logout-btn {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .mentor-logout-btn span {
+    display: none;
+  }
+
+  .profile-content {
+    margin-left: 70px;
+
+    width: calc(100% - 70px);
+
+    padding: 20px 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 23px;
+  }
+
+  .profile-card-main {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+
+  .profile-id {
+    width: 100%;
+
+    min-width: 100%;
+  }
+
+  .profile-box {
+    padding: 20px;
+  }
+
+  .profile-metrics {
+    grid-template-columns: 1fr;
+  }
+
+}
